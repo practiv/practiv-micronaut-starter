@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.practiv.stable.yazoo</groupId>
+    <artifactId>yazoo-parent</artifactId>
+    <version>2.9</version>
+  </parent>
+
+  <groupId>io.practiv.stable.starters</groupId>
+  <artifactId>practiv-micronaut-starter</artifactId>
+  <version>1.999-SNAPSHOT</version>
+
+  <name>${project.artifactId}</name>
+
+  <properties>
+    <tile-deploy.docker.ram>512Mi</tile-deploy.docker.ram>
+    <!-- <pitest.mutationThreshold>98</pitest.mutationThreshold> -->
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>io.repaint.maven</groupId>
+        <artifactId>tiles-maven-plugin</artifactId>
+        <version>2.17</version>
+        <configuration>
+          <tiles>
+            <tile>io.practiv.stable.yazoo:yazoo-tile-build:[1,2)</tile>
+            <tile>io.practiv.stable.tile:practiv-tile-changes:[3,4)</tile>
+            <tile>io.practiv.stable.chalk:chalk-micronaut-v3:[4,5)</tile>
+            <tile>io.practiv.stable.flint:flint-apputils:[12,13)</tile>
+            <!-- <tile>io.practiv.stable.chalk:chalk-quality-java:[1,2)</tile> // Todo: Create --> 
+          </tiles>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.practiv.stable.flint</groupId>
+      <artifactId>flint-apputils</artifactId>
+      <version>[12,13)</version>
+    </dependency>
+    <dependency>
+      <groupId>io.practiv.stable.flint</groupId>
+      <artifactId>flint-test-utils</artifactId>
+      <version>[1,2)</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
