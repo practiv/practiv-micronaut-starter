@@ -1,0 +1,17 @@
+# General application configuration. This file resolves to a kubernetes `config.yaml` file.
+# Variables such as ${userGreetingPhrase} are resolved at build time
+
+
+# - For local development, values from `src/test/resources/skaffold.properties` are used
+# - For the integration run phase, values from `src/test/resources/integration-test.properties` are used
+# - For environment deployments, values aren't sourced through the project, but rather the environment repository
+# --- This will include an `environment.properties` file for supplying environment specific values
+
+app:
+  greeting: ${userGreetingPhrase}
+
+micronaut:
+  application:
+    name: ${project.name}
+  server:
+    port: ${tile-deploy.port}

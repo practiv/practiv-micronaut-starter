@@ -1,0 +1,11 @@
+app:
+  greeting: "Hello from junit tests, "
+  secretKey: "SecretKeyFromTest"
+
+micronaut:
+  application:
+    name: practiv-micronaut-starter
+  server:
+    port: ${random.port}
+  security:
+    enabled: false

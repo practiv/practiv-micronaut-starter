@@ -7,19 +7,18 @@
   <parent>
     <groupId>io.practiv.stable.yazoo</groupId>
     <artifactId>yazoo-parent</artifactId>
-    <version>2.9</version>
+    <version>2.10</version>
   </parent>
+
+  <properties>
+    <tile-deploy.docker.ram>512Mi</tile-deploy.docker.ram>
+  </properties>
 
   <groupId>io.practiv.stable.starters</groupId>
   <artifactId>practiv-micronaut-starter</artifactId>
   <version>1.999-SNAPSHOT</version>
 
   <name>${project.artifactId}</name>
-
-  <properties>
-    <tile-deploy.docker.ram>512Mi</tile-deploy.docker.ram>
-    <!-- <pitest.mutationThreshold>98</pitest.mutationThreshold> -->
-  </properties>
 
   <build>
     <plugins>
@@ -33,7 +32,6 @@
             <tile>io.practiv.stable.tile:practiv-tile-changes:[3,4)</tile>
             <tile>io.practiv.stable.chalk:chalk-micronaut-v3:[4,5)</tile>
             <tile>io.practiv.stable.flint:flint-apputils:[12,13)</tile>
-            <!-- <tile>io.practiv.stable.chalk:chalk-quality-java:[1,2)</tile> // Todo: Create --> 
           </tiles>
         </configuration>
       </plugin>
@@ -47,9 +45,15 @@
       <version>[12,13)</version>
     </dependency>
     <dependency>
-      <groupId>io.practiv.stable.flint</groupId>
-      <artifactId>flint-test-utils</artifactId>
-      <version>[1,2)</version>
+      <groupId>io.practiv.stable.composite</groupId>
+      <artifactId>practiv-composite-micronaut-unittest</artifactId>
+      <version>[6,7)</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>5.2.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
