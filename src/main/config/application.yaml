@@ -15,3 +15,5 @@ micronaut:
     name: ${project.name}
   server:
     port: ${tile-deploy.port}
+  security:
+    enabled: false
