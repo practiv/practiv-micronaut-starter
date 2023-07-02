@@ -1,5 +1,7 @@
 # Practiv Micronaut Starter project
 
+This is a starter Micronaut template project. You can use this as an example for creating lightweight Micronaut applications.
+
 ## Usage 
 
 1. Build locally 
