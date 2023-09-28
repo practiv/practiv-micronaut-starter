@@ -30,8 +30,8 @@
           <tiles>
             <tile>io.practiv.stable.yazoo:yazoo-tile-build:[1,2)</tile>
             <tile>io.practiv.stable.tile:practiv-tile-changes:[3,4)</tile>
-            <tile>io.practiv.stable.chalk:chalk-micronaut-v3:[4,5)</tile>
-            <tile>io.practiv.stable.flint:flint-apputils:[12,13)</tile>
+            <tile>io.practiv.stable.chalk:chalk-micronaut-v3:[5,6)</tile>
+            <tile>io.practiv.stable.flint:flint-apputils:[13,14)</tile>
           </tiles>
         </configuration>
       </plugin>
@@ -42,7 +42,7 @@
     <dependency>
       <groupId>io.practiv.stable.flint</groupId>
       <artifactId>flint-apputils</artifactId>
-      <version>[12,13)</version>
+      <version>[13,14)</version>
     </dependency>
     <dependency>
       <groupId>io.practiv.stable.composite</groupId>
@@ -50,6 +50,8 @@
       <version>[6,7)</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- other per project dependencies can go here, but we recommend using composites for all common dependencies -->
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
